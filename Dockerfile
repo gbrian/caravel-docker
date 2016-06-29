@@ -3,6 +3,9 @@ FROM python:2.7.11
 # Install caravel
 RUN pip install caravel
 
+# Install databases
+RUN pip install MySQL-python
+
 # copy admin password details to /caravel for fabmanager
 RUN mkdir /caravel
 COPY admin.config /caravel/
